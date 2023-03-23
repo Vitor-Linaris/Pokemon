@@ -1,0 +1,180 @@
+.tag {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 244px;
+    max-width: 12.1rem;
+    padding: 6px 4px;
+    &.blue-tag {
+        .icon {
+            background-color: rgba(63, 104, 186, 0.15);
+        }
+        span {
+            color: #3F67BA;
+        }
+    }
+    .icon {
+        width: 26px;
+        height: 26px;
+        background-color: rgba(194, 0, 0, 0.2);
+        border-radius: 50%;
+        @include centerTotalFlex;
+        margin-right: 0.8rem;
+    }
+    span {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 150%;
+        color: #C20001;
+    }
+}
+
+.search {
+    background-color: #FFFFFF;
+    border-radius: 122px;
+    width: 100%;
+    max-width: 40.3rem;
+    height: 5.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2.5rem;
+    padding-right: 0.7rem;
+    input[type=text] {
+        border: 0;
+        outline: none;
+        width: 80%;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 150%;
+        color: #A0AFBA;
+        &::placeholder {
+            color: #A0AFBA;
+        }
+    }
+    button {
+        width: 4.2rem;
+        height: 4.2rem;
+        background: rgba(158, 185, 225, 0.1);
+        border-radius: 50%;
+        border: 1px solid transparent;
+        transition: border-color .3s;
+        &:hover {
+            border-color: #3E75C3
+        }
+        @include centerTotalFlex;
+    }
+}
+
+.type-filter {
+    display: flex;
+    align-items: center;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all .3s;
+    &:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+    .icon {
+        width: 2.8rem;
+        height: 2.8rem;
+        @include centerTotalFlex;
+        margin-right: 0.5rem;
+    }
+    span {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 150%;
+    }
+    &.ghost {
+        span {
+            color: #616EB7;
+        }
+    }
+    &.bug {
+        span {
+            color: #9BBA48;
+        }
+    }
+    &.dark {
+        span {
+            color: #595761;
+        }
+    }
+    &.dragon {
+        span {
+            color: #2C6AC1;
+        }
+    }
+    &.electric {
+        span {
+            color: #EED967;
+        }
+    }
+    &.fairy {
+        span {
+            color: #E296E1;
+        }
+    }
+    &.ground {
+        span {
+            color: #CE8056;
+        }
+    }
+    &.ice {
+        span {
+            color: #8BCEC1;
+        }
+    }
+    &.normal {
+        span {
+            color: #A0A29F;
+        }
+    }
+    &.poison {
+        span {
+            color: #AC6ACA;
+        }
+    }
+    &.psychic {
+        span {
+            color: #EB8B85;
+        }
+    }
+    &.grass {
+        span {
+            color: #73B861;
+        }
+    }
+    &.steel {
+        span {
+            color: #6594A1;
+        }
+    }
+    &.water {
+        span {
+            color: #88A3D4;
+        }
+    }
+    &.fire {
+        span {
+            color: #F66D6D;
+        }
+    }
+    &.fighting {
+        span {
+            color: #C44D61;
+        }
+    }
+    &.rock {
+        span {
+            color: #8BCEC1;
+        }
+    }
+    &.flying {
+        span {
+            color: #A6BBE8;
+        }
+    }
+}

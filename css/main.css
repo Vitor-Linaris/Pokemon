@@ -38,6 +38,203 @@ ul {
   list-style: none;
 }
 
+.tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 244px;
+  max-width: 12.1rem;
+  padding: 6px 4px;
+}
+.tag.blue-tag .icon {
+  background-color: rgba(63, 104, 186, 0.15);
+}
+.tag.blue-tag span {
+  color: #3F67BA;
+}
+.tag .icon {
+  width: 26px;
+  height: 26px;
+  background-color: rgba(194, 0, 0, 0.2);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 0.8rem;
+}
+.tag span {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 150%;
+  color: #C20001;
+}
+
+.search {
+  background-color: #FFFFFF;
+  border-radius: 122px;
+  width: 100%;
+  max-width: 40.3rem;
+  height: 5.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-left: 2.5rem;
+  padding-right: 0.7rem;
+}
+.search input[type=text] {
+  border: 0;
+  outline: none;
+  width: 80%;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 150%;
+  color: #A0AFBA;
+}
+.search input[type=text]::-webkit-input-placeholder {
+  color: #A0AFBA;
+}
+.search input[type=text]::-moz-placeholder {
+  color: #A0AFBA;
+}
+.search input[type=text]:-ms-input-placeholder {
+  color: #A0AFBA;
+}
+.search input[type=text]::-ms-input-placeholder {
+  color: #A0AFBA;
+}
+.search input[type=text]::placeholder {
+  color: #A0AFBA;
+}
+.search button {
+  width: 4.2rem;
+  height: 4.2rem;
+  background: rgba(158, 185, 225, 0.1);
+  border-radius: 50%;
+  border: 1px solid transparent;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.search button:hover {
+  border-color: #3E75C3;
+}
+
+.type-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.6;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.type-filter:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+.type-filter .icon {
+  width: 2.8rem;
+  height: 2.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+}
+.type-filter span {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+.type-filter.ghost span {
+  color: #616EB7;
+}
+.type-filter.bug span {
+  color: #9BBA48;
+}
+.type-filter.dark span {
+  color: #595761;
+}
+.type-filter.dragon span {
+  color: #2C6AC1;
+}
+.type-filter.electric span {
+  color: #EED967;
+}
+.type-filter.fairy span {
+  color: #E296E1;
+}
+.type-filter.ground span {
+  color: #CE8056;
+}
+.type-filter.ice span {
+  color: #8BCEC1;
+}
+.type-filter.normal span {
+  color: #A0A29F;
+}
+.type-filter.poison span {
+  color: #AC6ACA;
+}
+.type-filter.psychic span {
+  color: #EB8B85;
+}
+.type-filter.grass span {
+  color: #73B861;
+}
+.type-filter.steel span {
+  color: #6594A1;
+}
+.type-filter.water span {
+  color: #88A3D4;
+}
+.type-filter.fire span {
+  color: #F66D6D;
+}
+.type-filter.fighting span {
+  color: #C44D61;
+}
+.type-filter.rock span {
+  color: #8BCEC1;
+}
+.type-filter.flying span {
+  color: #A6BBE8;
+}
+
 h1, h2, h3 {
   font-family: "Montserrat", sans-serif;
   line-height: 150%;
