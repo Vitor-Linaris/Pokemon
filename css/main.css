@@ -45,7 +45,7 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 244px;
   max-width: 12.1rem;
   padding: 6px 4px;
@@ -54,7 +54,7 @@ ul {
   background-color: rgba(63, 104, 186, 0.15);
 }
 .tag.blue-tag span {
-  color: #3F67BA;
+  color: #3f67ba;
 }
 .tag .icon {
   width: 26px;
@@ -76,11 +76,11 @@ ul {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 150%;
-  color: #C20001;
+  color: #c20001;
 }
 
 .search {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 122px;
   width: 100%;
   max-width: 40.3rem;
@@ -104,22 +104,22 @@ ul {
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 150%;
-  color: #A0AFBA;
+  color: #a0afba;
 }
 .search input[type=text]::-webkit-input-placeholder {
-  color: #A0AFBA;
+  color: #a0afba;
 }
 .search input[type=text]::-moz-placeholder {
-  color: #A0AFBA;
+  color: #a0afba;
 }
 .search input[type=text]:-ms-input-placeholder {
-  color: #A0AFBA;
+  color: #a0afba;
 }
 .search input[type=text]::-ms-input-placeholder {
-  color: #A0AFBA;
+  color: #a0afba;
 }
 .search input[type=text]::placeholder {
-  color: #A0AFBA;
+  color: #a0afba;
 }
 .search button {
   width: 4.2rem;
@@ -140,7 +140,7 @@ ul {
   justify-content: center;
 }
 .search button:hover {
-  border-color: #3E75C3;
+  border-color: #3e75c3;
 }
 
 .type-filter {
@@ -181,60 +181,82 @@ ul {
   line-height: 150%;
 }
 .type-filter.ghost span {
-  color: #616EB7;
+  color: #616eb7;
 }
 .type-filter.bug span {
-  color: #9BBA48;
+  color: #9bba48;
 }
 .type-filter.dark span {
   color: #595761;
 }
 .type-filter.dragon span {
-  color: #2C6AC1;
+  color: #2c6ac1;
 }
 .type-filter.electric span {
-  color: #EED967;
+  color: #eed967;
 }
 .type-filter.fairy span {
-  color: #E296E1;
+  color: #e296e1;
 }
 .type-filter.ground span {
-  color: #CE8056;
+  color: #ce8056;
 }
 .type-filter.ice span {
-  color: #8BCEC1;
+  color: #8bcec1;
 }
 .type-filter.normal span {
-  color: #A0A29F;
+  color: #a0a29f;
 }
 .type-filter.poison span {
-  color: #AC6ACA;
+  color: #ac6aca;
 }
 .type-filter.psychic span {
-  color: #EB8B85;
+  color: #eb8b85;
 }
 .type-filter.grass span {
-  color: #73B861;
+  color: #73b861;
 }
 .type-filter.steel span {
-  color: #6594A1;
+  color: #6594a1;
 }
 .type-filter.water span {
-  color: #88A3D4;
+  color: #88a3d4;
 }
 .type-filter.fire span {
-  color: #F66D6D;
+  color: #f66d6d;
 }
 .type-filter.fighting span {
-  color: #C44D61;
+  color: #c44d61;
 }
 .type-filter.rock span {
-  color: #8BCEC1;
+  color: #8bcec1;
 }
 .type-filter.flying span {
-  color: #A6BBE8;
+  color: #a6bbe8;
 }
 
+.card-pokemon {
+  width: 100%;
+  max-width: 28rem;
+  height: 30.4rem;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 10px 51px -5px rgba(183, 189, 193, 0.3);
+  box-shadow: 0px 10px 51px -5px rgba(183, 189, 193, 0.3);
+  border-radius: 12px;
+}
+.card-pokemon .image {
+  width: 200px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 h1, h2, h3 {
   font-family: "Montserrat", sans-serif;
   line-height: 150%;

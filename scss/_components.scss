@@ -1,180 +1,196 @@
 .tag {
-    display: flex;
-    align-items: center;
-    background-color: #FFFFFF;
-    border-radius: 244px;
-    max-width: 12.1rem;
-    padding: 6px 4px;
-    &.blue-tag {
-        .icon {
-            background-color: rgba(63, 104, 186, 0.15);
-        }
-        span {
-            color: #3F67BA;
-        }
-    }
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 244px;
+  max-width: 12.1rem;
+  padding: 6px 4px;
+  &.blue-tag {
     .icon {
-        width: 26px;
-        height: 26px;
-        background-color: rgba(194, 0, 0, 0.2);
-        border-radius: 50%;
-        @include centerTotalFlex;
-        margin-right: 0.8rem;
+      background-color: rgba(63, 104, 186, 0.15);
     }
     span {
-        font-weight: 600;
-        font-size: 1.5rem;
-        line-height: 150%;
-        color: #C20001;
+      color: #3f67ba;
     }
+  }
+  .icon {
+    width: 26px;
+    height: 26px;
+    background-color: rgba(194, 0, 0, 0.2);
+    border-radius: 50%;
+    @include centerTotalFlex;
+    margin-right: 0.8rem;
+  }
+  span {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 150%;
+    color: #c20001;
+  }
 }
 
 .search {
-    background-color: #FFFFFF;
-    border-radius: 122px;
-    width: 100%;
-    max-width: 40.3rem;
-    height: 5.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 2.5rem;
-    padding-right: 0.7rem;
-    input[type=text] {
-        border: 0;
-        outline: none;
-        width: 80%;
-        font-weight: 400;
-        font-size: 1.5rem;
-        line-height: 150%;
-        color: #A0AFBA;
-        &::placeholder {
-            color: #A0AFBA;
-        }
+  background-color: #ffffff;
+  border-radius: 122px;
+  width: 100%;
+  max-width: 40.3rem;
+  height: 5.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2.5rem;
+  padding-right: 0.7rem;
+  input[type="text"] {
+    border: 0;
+    outline: none;
+    width: 80%;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 150%;
+    color: #a0afba;
+    &::placeholder {
+      color: #a0afba;
     }
-    button {
-        width: 4.2rem;
-        height: 4.2rem;
-        background: rgba(158, 185, 225, 0.1);
-        border-radius: 50%;
-        border: 1px solid transparent;
-        transition: border-color .3s;
-        &:hover {
-            border-color: #3E75C3
-        }
-        @include centerTotalFlex;
+  }
+  button {
+    width: 4.2rem;
+    height: 4.2rem;
+    background: rgba(158, 185, 225, 0.1);
+    border-radius: 50%;
+    border: 1px solid transparent;
+    transition: border-color 0.3s;
+    &:hover {
+      border-color: #3e75c3;
     }
+    @include centerTotalFlex;
+  }
 }
 
 .type-filter {
-    display: flex;
-    align-items: center;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: all .3s;
-    &:hover {
-        filter: grayscale(0%);
-        opacity: 1;
-    }
-    .icon {
-        width: 2.8rem;
-        height: 2.8rem;
-        @include centerTotalFlex;
-        margin-right: 0.5rem;
-    }
+  display: flex;
+  align-items: center;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s;
+  &:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+  .icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    @include centerTotalFlex;
+    margin-right: 0.5rem;
+  }
+  span {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 150%;
+  }
+  &.ghost {
     span {
-        font-weight: 500;
-        font-size: 1.5rem;
-        line-height: 150%;
+      color: #616eb7;
     }
-    &.ghost {
-        span {
-            color: #616EB7;
-        }
+  }
+  &.bug {
+    span {
+      color: #9bba48;
     }
-    &.bug {
-        span {
-            color: #9BBA48;
-        }
+  }
+  &.dark {
+    span {
+      color: #595761;
     }
-    &.dark {
-        span {
-            color: #595761;
-        }
+  }
+  &.dragon {
+    span {
+      color: #2c6ac1;
     }
-    &.dragon {
-        span {
-            color: #2C6AC1;
-        }
+  }
+  &.electric {
+    span {
+      color: #eed967;
     }
-    &.electric {
-        span {
-            color: #EED967;
-        }
+  }
+  &.fairy {
+    span {
+      color: #e296e1;
     }
-    &.fairy {
-        span {
-            color: #E296E1;
-        }
+  }
+  &.ground {
+    span {
+      color: #ce8056;
     }
-    &.ground {
-        span {
-            color: #CE8056;
-        }
+  }
+  &.ice {
+    span {
+      color: #8bcec1;
     }
-    &.ice {
-        span {
-            color: #8BCEC1;
-        }
+  }
+  &.normal {
+    span {
+      color: #a0a29f;
     }
-    &.normal {
-        span {
-            color: #A0A29F;
-        }
+  }
+  &.poison {
+    span {
+      color: #ac6aca;
     }
-    &.poison {
-        span {
-            color: #AC6ACA;
-        }
+  }
+  &.psychic {
+    span {
+      color: #eb8b85;
     }
-    &.psychic {
-        span {
-            color: #EB8B85;
-        }
+  }
+  &.grass {
+    span {
+      color: #73b861;
     }
-    &.grass {
-        span {
-            color: #73B861;
-        }
+  }
+  &.steel {
+    span {
+      color: #6594a1;
     }
-    &.steel {
-        span {
-            color: #6594A1;
-        }
+  }
+  &.water {
+    span {
+      color: #88a3d4;
     }
-    &.water {
-        span {
-            color: #88A3D4;
-        }
+  }
+  &.fire {
+    span {
+      color: #f66d6d;
     }
-    &.fire {
-        span {
-            color: #F66D6D;
-        }
+  }
+  &.fighting {
+    span {
+      color: #c44d61;
     }
-    &.fighting {
-        span {
-            color: #C44D61;
-        }
+  }
+  &.rock {
+    span {
+      color: #8bcec1;
     }
-    &.rock {
-        span {
-            color: #8BCEC1;
-        }
+  }
+  &.flying {
+    span {
+      color: #a6bbe8;
     }
-    &.flying {
-        span {
-            color: #A6BBE8;
-        }
-    }
+  }
+}
+
+.card-pokemon {
+  width: 100%;
+  max-width: 28rem;
+  height: 30.4rem;
+  background-color: #fff;
+  box-shadow: 0px 10px 51px -5px rgba(183, 189, 193, 0.3);
+  border-radius: 12px;
+  .image {
+    width: 200px;
+    height: 200px;
+    @include centerTotalFlex;
+  }
+  .info {
+  }
 }
