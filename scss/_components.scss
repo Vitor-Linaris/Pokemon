@@ -180,17 +180,223 @@
 }
 
 .card-pokemon {
+  position: relative;
   width: 100%;
   max-width: 28rem;
   height: 30.4rem;
   background-color: #fff;
   box-shadow: 0px 10px 51px -5px rgba(183, 189, 193, 0.3);
   border-radius: 12px;
+  z-index: 1;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 12px 40px -5px rgba(90, 96, 100, 0.3);
+  }
+  &.grass {
+    .image {
+      &:after {
+        background-color: rgba(114, 184, 97, 0.2);
+      }
+    }
+  }
+  &.bug {
+    .image {
+      &:after {
+        background-color: rgba(156, 186, 72, 0.2);
+      }
+    }
+  }
+  &.dark {
+    .image {
+      &:after {
+        background-color: rgba(89, 87, 97, 0.2);
+      }
+    }
+  }
+  &.dragon {
+    .image {
+      &:after {
+        background-color: rgba(44, 106, 193, 0.2);
+      }
+    }
+  }
+  &.electric {
+    .image {
+      &:after {
+        background-color: rgba(238, 218, 103, 0.2);
+      }
+    }
+  }
+  &.fairy {
+    .image {
+      &:after {
+        background-color: rgba(226, 150, 225, 0.2);
+      }
+    }
+  }
+  &.fighting {
+    .image {
+      &:after {
+        background-color: rgba(196, 77, 97, 0.2);
+      }
+    }
+  }
+  &.ground {
+    .image {
+      &:after {
+        background-color: rgba(206, 128, 86, 0.2);
+      }
+    }
+  }
+  &.ice {
+    .image {
+      &:after {
+        background-color: rgba(139, 206, 193, 0.2);
+      }
+    }
+  }
+  &.normal {
+    .image {
+      &:after {
+        background-color: rgba(160, 162, 159, 0.2);
+      }
+    }
+  }
+  &.poison {
+    .image {
+      &:after {
+        background-color: rgba(172, 106, 202, 0.2);
+      }
+    }
+  }
+  &.psychic {
+    .image {
+      &:after {
+        background-color: rgba(235, 140, 133, 0.2);
+      }
+    }
+  }
+  &.rock {
+    .image {
+      &:after {
+        background-color: rgba(139, 206, 193, 0.2);
+      }
+    }
+  }
+  &.ghost {
+    .image {
+      &:after {
+        background-color: rgba(97, 110, 183, 0.2);
+      }
+    }
+  }
+  &.steel {
+    .image {
+      &:after {
+        background-color: rgba(101, 148, 161, 0.2);
+      }
+    }
+  }
+  &.water {
+    .image {
+      &:after {
+        background-color: rgba(136, 163, 212, 0.2);
+      }
+    }
+  }
+  &.fire {
+    .image {
+      &:after {
+        background-color: rgba(246, 109, 109, 0.2);
+      }
+    }
+  }
+  &.flying {
+    .image {
+      &:after {
+        background-color: rgba(166, 187, 232, 0.2);
+      }
+    }
+  }
   .image {
+    position: relative;
     width: 200px;
     height: 200px;
     @include centerTotalFlex;
+    margin: 0 auto;
+    margin-bottom: 1.4rem;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 16.5rem;
+      height: 16.5rem;
+      z-index: -1;
+      border-radius: 50%;
+    }
   }
   .info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.8rem;
+    .text {
+      span {
+        display: block;
+        text-align: left;
+        font-weight: 500;
+        font-size: 1.3rem;
+        line-height: 150%;
+        color: #7a7d80;
+        margin-bottom: 0.6rem;
+      }
+    }
+    .icon {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.tag-type {
+  display: inline-block;
+  padding: 0 2.5rem;
+  line-height: 2.4rem;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.01em;
+  &.bug {
+    color: #9bba48;
+    background-color: rgba(156, 186, 72, 0.1);
+  }
+  &.dark {
+    color: #595761;
+    background-color: rgba(89, 87, 97, 0.1);
+  }
+  &.dragon {
+    color: #2c6ac1;
+    background-color: rgba(44, 106, 193, 0.1);
+  }
+  &.electric {
+    color: #d4bc34;
+    background-color: rgba(212, 188, 52, 0.1);
+  }
+  &.bug {
+    color: #9bba48;
+    background-color: rgba(156, 186, 72, 0.1);
+  }
+  &.bug {
+    color: #9bba48;
+    background-color: rgba(156, 186, 72, 0.1);
+  }
+  &.bug {
+    color: #9bba48;
+    background-color: rgba(156, 186, 72, 0.1);
+  }
+  &.bug {
+    color: #9bba48;
+    background-color: rgba(156, 186, 72, 0.1);
   }
 }
