@@ -38,6 +38,13 @@ ul {
   list-style: none;
 }
 
+.container {
+  width: 100%;
+  max-width: 121.6rem;
+  margin: 0 auto;
+  padding: 0rem 1.5rem;
+}
+
 .tag {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -364,7 +371,7 @@ ul {
   line-height: 2.4rem;
   border-radius: 2px;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 1.3rem;
   font-family: "Montserrat", sans-serif;
   letter-spacing: -0.01em;
 }
@@ -384,21 +391,78 @@ ul {
   color: #d4bc34;
   background-color: rgba(212, 188, 52, 0.1);
 }
-.tag-type.bug {
-  color: #9bba48;
-  background-color: rgba(156, 186, 72, 0.1);
+.tag-type.fairy {
+  color: #e296e1;
+  background-color: rgba(226, 150, 225, 0.1);
 }
-.tag-type.bug {
-  color: #9bba48;
-  background-color: rgba(156, 186, 72, 0.1);
+.tag-type.fighting {
+  color: #c44d61;
+  background-color: rgba(196, 77, 97, 0.1);
 }
-.tag-type.bug {
-  color: #9bba48;
-  background-color: rgba(156, 186, 72, 0.1);
+.tag-type.ground {
+  color: #ce8056;
+  background-color: rgba(206, 128, 86, 0.1);
 }
-.tag-type.bug {
-  color: #9bba48;
-  background-color: rgba(156, 186, 72, 0.1);
+.tag-type.ice {
+  color: #71baac;
+  background-color: rgba(113, 186, 171, 0.1);
+}
+.tag-type.normal {
+  color: #909090;
+  background-color: rgba(144, 144, 144, 0.1);
+}
+.tag-type.poison {
+  color: #ac6aca;
+  background-color: rgba(172, 106, 202, 0.1);
+}
+.tag-type.psychic {
+  color: #eb8b85;
+  background-color: rgba(235, 140, 133, 0.1);
+}
+.tag-type.rock {
+  color: #84beb3;
+  background-color: rgba(132, 190, 179, 0.1);
+}
+.tag-type.ghost {
+  color: #616eb7;
+  background-color: rgba(97, 110, 183, 0.1);
+}
+.tag-type.grass {
+  color: #73b861;
+  background-color: rgba(114, 184, 97, 0.1);
+}
+.tag-type.steal {
+  color: #6594a1;
+  background-color: rgba(101, 148, 161, 0.1);
+}
+.tag-type.water {
+  color: #4f77be;
+  background-color: rgba(79, 120, 190, 0.1);
+}
+.tag-type.fire {
+  color: #e96303;
+  background-color: rgba(233, 99, 3, 0.1);
+}
+.tag-type.flying {
+  color: #758cbd;
+  background-color: rgba(117, 140, 189, 0.1);
+}
+
+.btn-load-more {
+  background-color: rgba(63, 93, 179, 0.1);
+  border-radius: 6px;
+  padding: 1.4rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+  color: #3f5db3;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.btn-load-more:hover {
+  background-color: #3f5db3;
+  color: #fff;
 }
 
 h1, h2, h3 {
@@ -427,4 +491,31 @@ h2 {
 h3 {
   font-weight: 600;
   font-size: 1.8rem;
+}
+
+footer {
+  width: 100%;
+  background-color: #3f5db3;
+  padding-top: 6.7rem;
+  padding-bottom: 6.5rem;
+}
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+footer .text h3 {
+  color: #fff;
+}
+footer .text p {
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 180%;
+  color: rgba(255, 255, 255, 0.8);
 }
