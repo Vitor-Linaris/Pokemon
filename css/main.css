@@ -905,3 +905,39 @@ footer .text p {
   line-height: 180%;
   color: rgba(255, 255, 255, 0.8);
 }
+
+.s-area-slide-hero {
+  position: relative;
+  width: 100%;
+  height: 99.4rem;
+}
+.s-area-slide-hero .slide-hero {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.s-area-slide-hero .slide-hero .swiper-slide.blue .main-area {
+  background-image: url("../img/bg-blue.svg");
+}
+.s-area-slide-hero .slide-hero .swiper-slide:after {
+  content: "";
+  width: 100%;
+  height: 28.8rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #eff3f6;
+  z-index: 0;
+  pointer-events: none;
+}
+.s-area-slide-hero .slide-hero .swiper-slide .main-area {
+  background: url("../img/bg-red.svg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 70.6rem;
+}
+.s-area-slide-hero .slide-hero .swiper-slide .main-area .text .image {
+  position: relative;
+  z-index: 1;
+  margin-top: 20rem;
+}

@@ -1,3 +1,11 @@
+//Scripts do slide principal
+var slide_hero = new Swiper(".slide-hero", {
+  effect: "fade",
+  pagination: {
+    el: "",
+  },
+});
+
 const cardPokemon = document.querySelectorAll(".js-open-details-pokemon");
 const btnCloseModal = document.querySelector(".js-close-modal-details-pokemon");
 
