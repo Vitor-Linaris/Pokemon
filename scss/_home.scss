@@ -129,3 +129,73 @@
     }
   }
 }
+
+.s-all-info-pokemons {
+  position: relative;
+  padding-top: 11.9rem;
+  margin-top: -28.8rem;
+  z-index: 2;
+  .top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 16.8rem;
+    h2 {
+      width: 100%;
+      max-width: 26.5rem;
+    }
+    .search {
+      margin-top: 2.2rem;
+    }
+  }
+  .area-all {
+    display: flex;
+    .left-container {
+      width: 100%;
+      max-width: 23.9rem;
+      border-right: 1px solid #eff3f6;
+      padding-top: 7.1rem;
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-bottom: 4rem;
+          }
+        }
+      }
+    }
+    .right-container {
+      width: 100%;
+      padding-top: 7.1rem;
+      padding-left: 7.5rem;
+      padding-bottom: 8.5rem;
+      .top-container {
+        margin-bottom: 6.3rem;
+        .icon {
+          display: flex;
+          img {
+            width: 3.2rem;
+            height: 3.2rem;
+          }
+          span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 1.8rem;
+            line-height: 150%;
+            color: #4d5053;
+            margin-left: 0.6rem;
+          }
+        }
+      }
+      .all {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 32px;
+        margin-bottom: 6.8rem;
+      }
+      .btn-load-more {
+        display: table;
+        margin: 0 auto;
+      }
+    }
+  }
+}
