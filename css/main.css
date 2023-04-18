@@ -352,6 +352,9 @@ ul {
   margin: 0 auto;
   margin-bottom: 1.4rem;
 }
+.card-pokemon .image .thumb-img {
+  max-width: 14.2rem;
+}
 .card-pokemon .image:after {
   content: "";
   position: absolute;
