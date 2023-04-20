@@ -33,7 +33,7 @@ btnDropdownSelect.addEventListener("click", () => {
 
 const areaPokemons = document.getElementById("js-list-pokemon");
 
-function primeiraLetraMaiscula(string) {
+function primeiraLetraMaiuscula(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
@@ -66,7 +66,7 @@ function createCardPokemon(code, type, nome, imagePok) {
   infoTextPokemon.appendChild(codePokemon);
 
   let namePokemon = document.createElement("h3");
-  namePokemon.textContent = primeiraLetraMaiscula(nome);
+  namePokemon.textContent = primeiraLetraMaiuscula(nome);
   infoTextPokemon.appendChild(namePokemon);
 
   let areaIcon = document.createElement("div");
@@ -125,3 +125,59 @@ function listingPokemons(urlApi) {
 }
 
 listingPokemons(" https://pokeapi.co/api/v2/pokemon?limit=9&offset=0");
+
+// Listando os tipos de Pokemons (Fire, steel, etc).
+
+const areaType = document.getElementById("js-type-area");
+const areaTypeMobile = document.querySelector(".dropdown-select");
+
+axios({
+  method: "GET",
+  url: "https://pokeapi.co/api/v2/type/",
+}).then((response) => {
+  const { results } = response.data;
+
+  results.forEach((type, index) => {
+    if (index < 18) {
+      let itemType = document.createElement("li");
+      areaType.appendChild(itemType);
+
+      let buttonType = document.createElement("button");
+      buttonType.classList = `type-filter ${type.name}`;
+      itemType.appendChild(buttonType);
+
+      let iconType = document.createElement("div");
+      iconType.classList = "icon";
+      buttonType.appendChild(iconType);
+
+      let srcType = document.createElement("img");
+      srcType.setAttribute("src", `img/icon-types/${type.name}.svg`);
+      iconType.appendChild(srcType);
+
+      let nameType = document.createElement("span");
+      nameType.textContent = primeiraLetraMaiuscula(type.name);
+      buttonType.appendChild(nameType);
+
+      //Mobile tipos de pokemons
+
+      let itemTypeMobile = document.createElement("li");
+      areaTypeMobile.appendChild(itemTypeMobile);
+
+      let buttonTypeMobile = document.createElement("button");
+      buttonTypeMobile.classList = `type-filter ${type.name}`;
+      itemTypeMobile.appendChild(buttonTypeMobile);
+
+      let iconTypeMobile = document.createElement("div");
+      iconTypeMobile.classList = "icon";
+      buttonTypeMobile.appendChild(iconTypeMobile);
+
+      let srcTypeMobile = document.createElement("img");
+      srcTypeMobile.setAttribute("src", `img/icon-types/${type.name}.svg`);
+      iconTypeMobile.appendChild(srcTypeMobile);
+
+      let nameTypeMobile = document.createElement("span");
+      nameTypeMobile.textContent = primeiraLetraMaiuscula(type.name);
+      buttonTypeMobile.appendChild(nameTypeMobile);
+    }
+  });
+});
