@@ -33,9 +33,14 @@ btnDropdownSelect.addEventListener("click", () => {
 
 const areaPokemons = document.getElementById("js-list-pokemon");
 
+function primeiraLetraMaiscula(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function createCardPokemon(code, type, nome, imagePok) {
   let card = document.createElement("button");
   card.classList = `card-pokemon js-open-details-pokemon ${type}`;
+  card.setAttribute("code-pokemon", code);
   areaPokemons.appendChild(card);
 
   let image = document.createElement("div");
@@ -43,7 +48,7 @@ function createCardPokemon(code, type, nome, imagePok) {
   card.appendChild(image);
 
   let imageSrc = document.createElement("img");
-  imageSrc.classList = "thumb-img";
+  imageSrc.className = "thumb-img";
   imageSrc.setAttribute("src", imagePok);
   image.appendChild(imageSrc);
 
@@ -52,13 +57,25 @@ function createCardPokemon(code, type, nome, imagePok) {
   card.appendChild(infoCardPokemon);
 
   let infoTextPokemon = document.createElement("div");
-  infoCardPokemon.classList = "text";
-  card.appendChild(infoTextPokemon);
+  infoTextPokemon.classList = "text";
+  infoCardPokemon.appendChild(infoTextPokemon);
 
   let codePokemon = document.createElement("span");
   codePokemon.textContent =
     code < 10 ? `#00${code}` : code < 100 ? `#0${code}` : `#${code}`;
   infoTextPokemon.appendChild(codePokemon);
+
+  let namePokemon = document.createElement("h3");
+  namePokemon.textContent = primeiraLetraMaiscula(nome);
+  infoTextPokemon.appendChild(namePokemon);
+
+  let areaIcon = document.createElement("div");
+  areaIcon.classList = "icon";
+  infoCardPokemon.appendChild(areaIcon);
+
+  let imageType = document.createElement("img");
+  imageType.setAttribute("src", `img/icon-types/${type}.svg`);
+  areaIcon.appendChild(imageType);
 }
 
 function listingPokemons(urlApi) {
@@ -94,6 +111,14 @@ function listingPokemons(urlApi) {
           infoCard.nome,
           infoCard.image
         );
+
+        const cardPokemon = document.querySelectorAll(
+          ".js-open-details-pokemon"
+        );
+
+        cardPokemon.forEach((card) => {
+          card.addEventListener("click", openDetailsPokemon);
+        });
       });
     });
   });
