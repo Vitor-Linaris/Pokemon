@@ -143,6 +143,7 @@ axios({
       areaType.appendChild(itemType);
 
       let buttonType = document.createElement("button");
+      buttonType.setAttribute("code-type", index + 1);
       buttonType.classList = `type-filter ${type.name}`;
       itemType.appendChild(buttonType);
 
@@ -164,6 +165,7 @@ axios({
       areaTypeMobile.appendChild(itemTypeMobile);
 
       let buttonTypeMobile = document.createElement("button");
+      buttonTypeMobile.setAttribute("code-type", index + 1);
       buttonTypeMobile.classList = `type-filter ${type.name}`;
       itemTypeMobile.appendChild(buttonTypeMobile);
 
@@ -178,6 +180,12 @@ axios({
       let nameTypeMobile = document.createElement("span");
       nameTypeMobile.textContent = primeiraLetraMaiuscula(type.name);
       buttonTypeMobile.appendChild(nameTypeMobile);
+
+      const allTypes = document.querySelectorAll(".type-filter");
+
+      allTypes.forEach((btn) => {
+        btn.addEventListener("click", filterByTypes);
+      });
     }
   });
 });
@@ -197,3 +205,83 @@ function showMorePokemon() {
 }
 
 btnLoadMore.addEventListener("click", showMorePokemon);
+
+// função para filtrar os pokemons por tipo
+
+function filterByTypes() {
+  let idPokemon = this.getAttribute("code-type");
+
+  const areaPokemons = document.getElementById("js-list-pokemon");
+  const btnLoadMore = document.getElementById("js-btn-load-more");
+  const allTypes = document.querySelectorAll(".type-filter");
+  const countPokemonsType = document.getElementById("js-count-pokemons");
+
+  areaPokemons.innerHTML = "";
+  btnLoadMore.style.display = "none";
+
+  const sectionPokemons = document.querySelector(".s-all-info-pokemons");
+  const topSection = sectionPokemons.offsetTop;
+
+  window.scrollTo({
+    top: topSection + 288,
+    behavior: "smooth",
+  });
+
+  allTypes.forEach((type) => {
+    type.classList.remove("active");
+  });
+
+  this.classList.add("active");
+
+  if (idPokemon) {
+    axios({
+      method: "GET",
+      url: `https://pokeapi.co/api/v2/type/${idPokemon}`,
+    }).then((response) => {
+      const { pokemon } = response.data;
+
+      countPokemonsType.textContent = pokemon.length;
+
+      pokemon.forEach((pok) => {
+        const { url } = pok.pokemon;
+
+        axios({
+          method: "GET",
+          url: `${url}`,
+        }).then((response) => {
+          const { name, id, sprites, types } = response.data;
+
+          const infoCard = {
+            nome: name,
+            code: id,
+            image: sprites.other.dream_world.front_default,
+            type: types[0].type.name,
+          };
+
+          if (infoCard.image) {
+            createCardPokemon(
+              infoCard.code,
+              infoCard.type,
+              infoCard.nome,
+              infoCard.image
+            );
+          }
+
+          const cardPokemon = document.querySelectorAll(
+            ".js-open-details-pokemon"
+          );
+
+          cardPokemon.forEach((card) => {
+            card.addEventListener("click", openDetailsPokemon);
+          });
+        });
+      });
+    });
+  } else {
+    areaPokemons.innerHTML = "";
+
+    listingPokemons("https://pokeapi.co/api/v2/pokemon?limit=9&offset=0");
+
+    btnLoadMore.style.display = "block";
+  }
+}
