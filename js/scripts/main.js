@@ -12,6 +12,32 @@ const countPokemons = document.getElementById("js-count-pokemons");
 
 function openDetailsPokemon() {
   document.documentElement.classList.add("open-modal");
+
+  let codePokemon = this.getAttribute("code-pokemon");
+  let imagePokemon = this.querySelector(".thumb-img");
+  let iconTypePokemon = this.querySelector(".info .icon img");
+  let namePokemon = this.querySelector(".info .text h3").textContent;
+  let codeStringPokemon = this.querySelector(".info .text span").textContent;
+
+  const modalDetails = document.getElementById("js-modal-details");
+  const imgPokemonModal = document.getElementById("js-image-pokemon-modal");
+  const iconTypeModal = document.getElementById("js-image-type-modal");
+  const namePokemonModal = document.getElementById("js-name-pokemon-modal");
+  const codePokemonModal = document.getElementById("js-code-pokemon-modal");
+
+  imgPokemonModal.setAttribute("src", imagePokemon.getAttribute("src"));
+  modalDetails.setAttribute("type-pokemon-modal", this.classList[2]);
+  iconTypeModal.setAttribute("src", iconTypePokemon.getAttribute("src"));
+
+  namePokemonModal.textContent = namePokemon;
+  codePokemonModal.textContent = codeStringPokemon;
+
+  axios({
+    method: "GET",
+    url: `https://pokeapi.co/api/v2/pokemon/${codePokemon}`,
+  }).then((response) => {
+    console.log(response.data);
+  });
 }
 
 function closeDetailsPokemon() {
