@@ -16,8 +16,8 @@ function openDetailsPokemon() {
   let codePokemon = this.getAttribute("code-pokemon");
   let imagePokemon = this.querySelector(".thumb-img");
   let iconTypePokemon = this.querySelector(".info .icon img");
-  let namePokemon = this.querySelector(".info .text h3").textContent;
-  let codeStringPokemon = this.querySelector(".info .text span").textContent;
+  let namePokemon = this.querySelector(".info .text h3");
+  let codeStringPokemon = this.querySelector(".info .text span");
 
   const modalDetails = document.getElementById("js-modal-details");
   const imgPokemonModal = document.getElementById("js-image-pokemon-modal");
@@ -29,14 +29,43 @@ function openDetailsPokemon() {
   modalDetails.setAttribute("type-pokemon-modal", this.classList[2]);
   iconTypeModal.setAttribute("src", iconTypePokemon.getAttribute("src"));
 
-  namePokemonModal.textContent = namePokemon;
-  codePokemonModal.textContent = codeStringPokemon;
+  namePokemonModal.textContent = namePokemon.textContent;
+  codePokemonModal.textContent = codeStringPokemon.textContent;
 
   axios({
     method: "GET",
     url: `https://pokeapi.co/api/v2/pokemon/${codePokemon}`,
   }).then((response) => {
-    console.log(response.data);
+    let data = response.data;
+
+    let infoPokemon = {
+      mainAbilities: primeiraLetraMaiuscula(data.abilities[0].ability.name),
+      types: data.types,
+      weight: data.weight,
+      height: data.height,
+      abilities: data.abilities,
+      stats: data.stats,
+      urlTypes: data.types[0].type.url,
+    };
+
+    function listingTypesPokemon() {
+      const areaTypesModal = document.getElementById("js-types-pokemon");
+      areaTypesModal.innerHTML = "";
+
+      let arrayTypes = infoPokemon.types;
+
+      arrayTypes.forEach((itemTypes) => {
+        let itemList = document.createElement("li");
+        areaTypesModal.appendChild(itemList);
+
+        let spanList = document.createElement("span");
+        spanList.classList = `tag-type ${itemTypes.type.name}`;
+        spanList.textContent = primeiraLetraMaiuscula(itemTypes.type.name);
+        itemList.appendChild(spanList);
+      });
+    }
+
+    listingTypesPokemon();
   });
 }
 
